@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <p id="submittedUrl" style="display: none;"></p>
+        <div id="inputContainer">
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <button id="generateBtn">Generate QR Code</button>
+        </div>
+        <div id="qrcodeContainer" style="display: none;">
+            <div class="qrcode">
+                <img id="qrImg" src="" alt="QR Code">
+            </div>
+            <button id="downloadBtn" style="display: none;">Download QR Code</button>
+        </div>
+        <p id="submittedUrl"></p>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
